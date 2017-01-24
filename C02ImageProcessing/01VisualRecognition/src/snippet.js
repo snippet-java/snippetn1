@@ -11,8 +11,9 @@ function handler(req_parameters, callback) {
 	var http = require('http');
 
 	var visual_recognition = new watson.VisualRecognitionV3({
-		api_key: req_parameters.apikey, //SET YOUR API KEY
-		version_date: '2015-05-20'
+	    api_key: req_parameters.api_key,  //SET YOUR API KEY
+	    use_unauthenticated: true,        // REMOVE TO USE YOUR API KEY
+	    version_date: '2016-05-20'
 	});
 	
 	visual_recognition.detectFaces(parameters, (err, response) => {
