@@ -1,5 +1,5 @@
 {
-  "name": "WatsonPersonalityInsight",
+  "name": "NodeConversation",
   "version": "0.0.1",
 
   "dependencies": {
@@ -15,6 +15,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/snippet-java/snippetn1/tree/master/C01TextProcessing/04PersonalityInsight"
+    "url": "https://github.com/snippet-java/snippetn1/tree/master/C01TextProcessing/03Conversation"
   }
 }

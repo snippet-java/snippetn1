@@ -1,26 +1,27 @@
 var parameters = {
-  "username" : "f63c8977-de7d-4072-8e75-4df6d4f18be4",
-  "password" : "KgRenT0OXctD",
-  "text" : "Hello my friend",
-  "fromLanguage" : "en",
-  "toLanguage" : "es",
-  "url" : "https://gateway.watsonplatform.net/language-translator/api/"
-}
+  "username" : "",
+  "password" : ""
+};
 
+//Main function
+//Output will be reflected via console.log function
 function handler(req_parameters, callback) {
-  var LanguageTranslatorV2 = require('watson-developer-cloud/language-translator/v2');
+  var SpeechToTextV1 = require('watson-developer-cloud/speech-to-text/v1');
+  var fs = require('fs');
   
-  var language_translator = new LanguageTranslatorV2({
-    username: req_parameters.username, // SET YOUR USERNAME
-    password: req_parameters.password, // SET YOUR PASSWORD
-    url: req_parameters.url
+  var speech_to_text = new SpeechToTextV1({
+    username: req_parameters.username,  // SET YOUR USERNAME
+    password: req_parameters.password,  // SET YOUR PASSWORD
+    use_unauthenticated: true           // REMOVE TO USE YOUR USERNAME / PASSWORD
   });
 
-  language_translator.translate({
-    text: req_parameters.text,
-    source: req_parameters.fromLanguage,
-    target: req_parameters.toLanguage
-  }, function(err, response) {
+  var params = {
+    // From file
+    audio: fs.createReadStream('./public/resource/STTInput.wav'),
+    content_type: 'audio/wav; rate=44100'
+  };
+
+  speech_to_text.recognize(params, function (err, response) {
     if (err) {
       console.log('error:', err);
       if (typeof callback !== 'undefined' && typeof callback=="function") return callback(err);
@@ -28,7 +29,8 @@ function handler(req_parameters, callback) {
       console.log(JSON.stringify(response, null, 2));
       if (typeof callback !== 'undefined' && typeof callback=="function") return callback(response);
     }
-  }); 
+  });
+  
 }
 
 //Allows Execution of this handler
@@ -36,7 +38,7 @@ function handler(req_parameters, callback) {
 if (require.main === module) {
   handler(parameters,null);
 } else {
-  
+
 //	name of the unit for logging and servlet path also
   var unitpath = "";
 

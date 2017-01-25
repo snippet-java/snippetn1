@@ -23,6 +23,7 @@ function process(req_parameters, callback) {
 	  username: req_parameters.username, // SET YOUR USERNAME
 	  password: req_parameters.password, // SET YOUR PASSWORD
 	  version: 'v3',
+	  use_unauthenticated: true,
 	  version_date: '2016-05-19'
 	});
 	

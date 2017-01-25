@@ -28,6 +28,7 @@ function process(req_parameters, callback) {
 	var personality_insights = watson.personality_insights({
 		  username: req_parameters.username, // SET YOUR USERNAME
 		  password: req_parameters.password, // SET YOUR PASSWORD
+		  use_unauthenticated: true,
 		  version: 'v2'
 		});
 	
