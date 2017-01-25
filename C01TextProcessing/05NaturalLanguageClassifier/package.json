@@ -1,0 +1,20 @@
+{
+  "name": "NodeNLC",
+  "version": "0.0.1",
+
+  "dependencies": {
+    "express": "4.13.4",
+    "body-parser": "1.15.0",
+    "http": "*",
+    "path": "*",
+    "dynamic-routes": "*",
+    "forms": "*",
+    "cf-deployment-tracker-client": "*",
+    "alchemy-api": "*",
+    "watson-developer-cloud" : "*"    
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snippet-java/snippetn1/tree/master/C01TextProcessing/05NaturalLanguageClassifier"
+  }
+}
