@@ -19,13 +19,20 @@
     <div class="easyui-accordion">
         <div title="About" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
             <h3 style="color:#0099FF;">About</h3>
-            This program prints "Hello World!"
-        </div>
-        <div title="Code Walkthrough" data-options="iconCls:'icon-help',collapsed:false" style="padding:10px;">
-            <h3 style="color:#0099FF;">Code Walkthrough</h3>
-            <ol>
-                <li>Prints Hello World</li>
-            </ol>
+           <strong>1.4 Conversion between Strings and Numbers </strong>
+            <br>
+            Sometimes you will need to turn a number into a string.In those instances you will use the <code><strong>toString()</strong></code> method. Here's an example:
+            <br>
+            <code><pre>
+            var i = 256;
+            i = i.toString();
+            </code></pre>
+            <br>
+            Similary the strings can also be converted into numbers.The <code><strong>Number()</strong></code> function converts the object parameter to a number that represents the object's value. If the value cannot be converted to a legal number, NaN is returned.
+            <code><pre>
+            var str = "256";
+            var i = Number(str);
+            </code></pre>
         </div>
     </div>
 </body>
