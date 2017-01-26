@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World Documentation</title>
+    <link rel="stylesheet" type="text/css" href="/js/themes/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/js/themes/icon.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.easyui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/js/themes/ribbon.css">
+    <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
+    <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+</head>
+
+<body>
+    <div class="easyui-accordion">
+        <div title="About" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
+            <h3 style="color:#0099FF;">About</h3>
+            <strong>1.2 String Properties and Methods</strong>
+            <br> You will often need to know how many characters are in a string.For this you will use the <strong><code>.length</code></strong>            property. Here's an example:
+            <br> 
+            <code> 
+            var example = 'example string'; 
+            example.length 
+            </code>
+            <br> You will also often need to change the contents of a string.Strings have built-in functionality that allow
+            you to inspect and manipulate their contents.Here is an example using the .<strong><code>replace()</code></strong>method: 
+           <code>  
+            var example = 'Allen Outlaw'; 
+            var newExample = example.replace("Outlaw","Smith");
+            //Now the value of newExample is "Allen Smith" 
+            </code> 
+            <br>
+            <br> One can use Regular Expressions to match and replace patterns, but this is a vast topic and beyond scope
+            of this introductory tutorial. Please refer to <a href="http://www.w3schools.com/jsref/jsref_obj_regexp.asp">w3 Schools</a>            for more details
+            <br><br> The <strong>charAt()</strong> method returns the specified character from a string.Index is passed as
+            parameter to the <strong>charAt()</strong> method. 
+            <code>            
+            var studentName = "Linda" studentName.charAt(0);
+            // First character 'L' is returned studentName.charAt(3); 
+            // Fourth character 'd' is retruned 
+            </code>
+            <br><br> The <strong>substring()</strong> returns a subset of a string between one index and another, or through
+            the end of the string. <code>
+            var studentName = "Linda" studentName.substring(0, 3); //
+            returns 'Lin'. End index is not included studentName.substring(3); // returns 'da'. If End index is not passed,
+            the string from start index to end will be returned </code>
+            <br><br> The <strong>indexOf()</strong> method returns the index within the calling String object of the first
+            occurrence of the specified value <code>
+            var studentName = "Linda" studentName.indexOf('L');
+            // returns 0 studentName.substring('ind'); // returns 1 studentName.substring('e');//returns -1 </code>
+        </div>
+        <div title="Code Walkthrough" data-options="iconCls:'icon-help',collapsed:false" style="padding:10px;">
+            <h3 style="color:#0099FF;">Code Walkthrough</h3>
+            <ol>
+                <li>Prints Hello World</li>
+            </ol>
+        </div>
+        <div title="Video and Documentation" data-options="iconCls:'icon-help'" style="padding:10px;">
+            To be updated
+        </div>
+    </div>
+</body>
+
+</html>
