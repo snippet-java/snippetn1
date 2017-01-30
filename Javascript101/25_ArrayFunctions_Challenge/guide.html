@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--88888888888888888888888888888-->
+    <title>Array Functions Challenge</title>
+    <link rel="stylesheet" type="text/css" href="/js/themes/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/js/themes/icon.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.easyui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/js/themes/ribbon.css">
+    <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
+    <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+</head>
+
+<body>
+    <div class="easyui-accordion">
+        <div title="Challenge" data-options="iconCls:'icon-ok',collapsed:true" style="overflow:auto;padding:10px;">
+            <!--88888888888888888888888888888-->
+<br>
+Find the <strong>grade</strong> for the provided <strong>mark</strong>
+<br> 
+
+            <!--88888888888888888888888888888-->
+        </div>
+    </div>
+    <div class="easyui-accordion">
+        <div title="Solution" data-options="iconCls:'icon-ok',collapsed:true" style="overflow:auto;padding:10px;">
+<code><pre> 
+<!--88888888888888888888888888888-->    
+//This function returns garde for a mark
+function getGrade(mark) {
+    if (mark < 60){  
+      return "E";       
+    }   
+    else if (mark < 70) {  
+      return "D";  
+    }   
+    else if (mark < 80) {  
+      return "C";  
+    } else if (mark < 90) {  
+      return "B";   
+    } else if (mark <= 100) {  
+      return "A";  
+    } else {
+      return "Z";
+    }
+}
+ 
+function printallgrades(item, index) {
+    //Fill first blank with the name of the student
+    //Fill second blank with Grade of a student.
+    //To get the grade , call the getGrade by passing the mark
+    console.log(item[0] + " "+getGrade(item[1]));
+}
+ 
+var students = [['Betty', 80], ['David', 77], ['Celina', 88], ['Bush', 95], ['Aangelina', 68]];  
+ 
+ 
+students.forEach(printallgrades);
+<!--88888888888888888888888888888-->
+</pre></code>       
+        
+        </div>
+    </div>
+</body>
+
+</html>

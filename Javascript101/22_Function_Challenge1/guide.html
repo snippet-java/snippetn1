@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--88888888888888888888888888888-->
+    <title>Functions Challenge 2</title>
+    <link rel="stylesheet" type="text/css" href="/js/themes/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/js/themes/icon.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.easyui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/js/themes/ribbon.css">
+    <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
+    <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+</head>
+
+<body>
+    <div class="easyui-accordion">
+        <div title="Challenge" data-options="iconCls:'icon-ok',collapsed:true" style="overflow:auto;padding:10px;">
+            <!--88888888888888888888888888888-->
+<br>
+The function <strong>findAverageMarks()</strong> accepts two dimensional arrays as the parameter. It returns the average marks obtained by the students.
+<br><br>
+            <!--88888888888888888888888888888-->
+        </div>
+    </div>
+    <div class="easyui-accordion">
+        <div title="Solution" data-options="iconCls:'icon-ok',collapsed:true" style="overflow:auto;padding:10px;">
+<code><pre> 
+<!--88888888888888888888888888888-->    
+var numRows = 10;
+//Printing the 'numRows' rows
+for(var currentRow = 1 ; currentRow <= numRows ; currentRow++){
+    // * is  appended to the variable stars for every iteration
+    //to print new line
+    console.log(getStars(currentRow));
+} 
+ 
+//function accepts a number as parameter and returns the string of stars
+function getStars(noOfstars) {
+  var starsString = "";
+  for(var i = 1 ; i <= noOfstars ; i++) {
+        starsString = starsString + '*';
+    }
+return starsString;
+}
+<!--88888888888888888888888888888-->
+</pre></code>       
+        
+        </div>
+    </div>
+</body>
+
+</html>

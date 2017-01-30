@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <!--888888888888888888888888888888888888888-->
+    <title>Functions</title>
+    <link rel="stylesheet" type="text/css" href="/js/themes/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/js/themes/icon.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.easyui.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/js/themes/ribbon.css">
+    <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
+    <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+</head>
+
+<body>
+    <div class="easyui-accordion">
+        <div title="Code Walkthrough" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
+            <!--888888888888888888888888888888888888888-->
+            <ol>
+
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+            <!--888888888888888888888888888888888888888-->
+            <br>
+        </div>
+    </div>
+    <div class="easyui-accordion">
+        <div title="Description" data-options="iconCls:'icon-ok',collapsed:true" style="overflow:auto;padding:10px;">
+            <!--888888888888888888888888888888888888888-->
+<strong>Functions and Scope</strong> 
+                <br>
+A function is a block of code that takes input, processes that input, and then produces output.A function is composed of a sequence of statements called the function body. Values can be passed to a function, and the function will return a value. Functions can be called any number of times and this makes the code resusable.
+<br><br>
+<strong>Function parameters</strong>
+<br>
+A function can be declared to receive any number of parameters. parameters can be from any type. An parameter could be a string, a number, an array, an object and even another function.
+<br><br><br>
+<strong>Scope</strong>    
+<br>        
+Scope is the set of variables, objects, and functions you have access to.JavaScript has two scopes: global and local. A variable that is declared outside a function definition is a global variable, and its value is accessible and modifiable throughout your program. A variable that is declared inside a function definition is local. It is created and destroyed every time the function is executed, and it cannot be accessed by any code outside the function.
+<br>
+Functions defined inside other functions, known as nested functions, have access to their parent function's scope.Pay attention to the comments in the code below:
+<br>
+<code><pre>
+var a = 4;  // a is a global variable, it can be accessed by the functions below
+
+function foo() {
+    var b = a * 3;  // b cannot be accessed outside foo function, but can be accessed by functions
+                    // defined inside foo
+    function bar(c) {
+    var b = 2;  // another `b` variable is created inside bar function scope
+                // the changes to this new `b` variable don't affect the old `b` variable
+    console.log( a, b, c );
+    }
+
+    bar(b * 4);
+}
+
+foo(); // 4, 2, 48
+</pre></code>
+            <!--888888888888888888888888888888888888888-->
+        </div>
+    </div>
+</body>
+
+</html>

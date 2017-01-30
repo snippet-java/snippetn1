@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>For Loop</title>
+    <link rel="stylesheet" type="text/css" href="/js/themes/easyui.css">
+    <link rel="stylesheet" type="text/css" href="/js/themes/icon.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.easyui.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/js/themes/ribbon.css">
+    <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
+    <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+</head>
+
+<body>
+    <div class="easyui-accordion">
+        <div title="Code Walkthrough" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
+           <ol>
+               Program to print stars in the following format for <strong>numRows</strong> rows
+                <br>*
+                <br>**
+                <br>***
+                <br>**** 
+  
+               <li></li>
+               <li></li>
+               <li></li>
+           </ol>
+
+<br>
+        </div>
+    </div>
+    <div class="easyui-accordion">
+        <div title="Description" data-options="iconCls:'icon-ok',collapsed:true" style="overflow:auto;padding:10px;">
+        <strong>For Loop</strong>
+<br>
+For loops allow you to repeatedly run a block of code a certain number of times. This for loop logs to the console ten times:
+<br>
+<code><pre>
+for (var i = 1; i <= 10; i++) {
+  // log the numbers 1 through 10
+  console.log(i)
+}
+</pre></code>
+<br>
+The first part, <strong><code>var i = 0</code></strong>, is run once at the beginning of the loop. The variable i is used to track how many times the loop has run.
+<br><br>
+The second part, <strong><code>i &lt; 10</code></strong>, is checked at the beginning of every loop iteration before running the code inside the loop. If the statement is true, the code inside the loop is executed. If it is false, then the loop is complete. The statement<strong><code> i &lt; 10;</code> </strong>indicates that the loop will continue as long as 'i' is less than 10.
+<br><br>
+The final part, <strong><code>i++</code></strong>, is executed at the end of every loop. This increases the variable <strong>i</strong> by 1 after each loop. Once <strong>i</strong> reaches 10, the loop will exit.
+
+        </div>
+    </div>
+</body>
+
+</html>
