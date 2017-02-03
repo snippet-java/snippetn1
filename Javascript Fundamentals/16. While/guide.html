@@ -13,45 +13,60 @@
     <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
     <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
     <script type="text/javascript" src="/js/index.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+.panel-body {
+    font-size: 14px;
+}
+
+ol,ul{
+     padding-left: 20px;
+    margin:0px;   
+}
+
+</style>
 </head>
 
-<body>
+
+<body style="font-family: Monospace;">
     <div class="easyui-accordion">
-        <div title="Code Walkthrough" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
+        <div title="Code Walkthrough" data-options="collapsed:false" style="overflow:auto;padding:10px;">
            <ol>
               Use while loop to print all even numbers between 0 and <strong>maxNum</strong>  
-               <li></li>
-               <li></li>
-               <li></li>
+               <li></li><br>
+               <li></li><br>
+               <li></li><br>
            </ol>
 
 <br>
         </div>
     </div>
     <div class="easyui-accordion">
-        <div title="Description" data-options="iconCls:'icon-ok',collapsed:true" style="overflow:auto;padding:10px;">
+        <div title="Description" data-options="collapsed:true" style="overflow:auto;padding:10px;">
 Looping control flow allows us to go back to some point in the program where we were before and repeat it with our current program state. Two more ways to loop instead of using <strong>for</strong> is using <strong>while</strong> or <strong>do</strong>
 <br>
 Printing numbers from 1 to 10 using while loop.
 <br>
 
-<code><pre>
+<pre><code class="javascript">
 var num = 1;
 while (num <= 10) {
   console.log(i);
   num = num + 1;
 }
-</pre></code>
+</code></pre>
 <br>
 The do loop is a control structure similar to the while loop. It differs only on one point: a do loop always executes its body at least once, and it starts testing whether it should stop only after that first execution
 <br>
-<code><pre>
+<pre><code class="javascript">
 var num = 1;
 do {
   console.log(num);
   num = num + 1;
 } while(num<=10);
-</pre></code>
+</code></pre>
 <br>
 
 

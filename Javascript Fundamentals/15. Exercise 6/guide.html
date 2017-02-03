@@ -13,20 +13,35 @@
     <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
     <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
     <script type="text/javascript" src="/js/index.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+.panel-body {
+    font-size: 14px;
+}
+
+ol,ul{
+     padding-left: 20px;
+    margin:0px;   
+}
+
+</style>
 </head>
 
-<body>
+
+<body style="font-family: Monospace;">
     <div class="easyui-accordion">
-        <div title="Challenge" data-options="iconCls:'icon-ok',collapsed:true" style="overflow:auto;padding:10px;">
+        <div title="Exercise" data-options="collapsed:true" style="overflow:auto;padding:10px;">
             <!--88888888888888888888888888888-->
             Print multiplication table for a provided number <strong>num</strong>
             <!--88888888888888888888888888888-->
         </div>
     </div>
     <div class="easyui-accordion">
-        <div title="Solution" data-options="iconCls:'icon-ok',collapsed:true" style="overflow:auto;padding:10px;">
+        <div title="Solution" data-options="collapsed:true" style="overflow:auto;padding:10px;">
         <!--88888888888888888888888888888-->
-<code><pre> 
+<pre><code class="javascript"> 
 var num = 5;    
 //numRows specifies the number of rows in the multiplication table
 var numRows = 10;

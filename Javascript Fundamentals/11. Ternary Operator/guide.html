@@ -13,25 +13,40 @@
     <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
     <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
     <script type="text/javascript" src="/js/index.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+.panel-body {
+    font-size: 14px;
+}
+
+ol,ul{
+     padding-left: 20px;
+    margin:0px;   
+}
+
+</style>
 </head>
 
-<body>
+
+<body style="font-family: Monospace;">
      <div class="easyui-accordion">
-        <div title="Code Walkthrough" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
+        <div title="Code Walkthrough" data-options="collapsed:false" style="overflow:auto;padding:10px;">
            <ol> 
-               <li></li>
-               <li></li>
-               <li></li>
+               <li></li><br>
+               <li></li><br>
+               <li></li><br>
            </ol>
         </div>
     </div>
     <div class="easyui-accordion">
-        <div title="About" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
+        <div title="About" data-options="collapsed:false" style="overflow:auto;padding:10px;">
             <h3 style="color:#0099FF;">About</h3>           
             <strong>Ternary operator</strong> can be used  instead of <strong>if</strong>.
             <br>
 
-            <code><pre>
+            <pre><code class="javascript">
             Strucuture of ternary operator
             condition ? expr1 : expr2 
             If condition is true, the operator returns the value of expr1; otherwise, it returns the value of expr2.

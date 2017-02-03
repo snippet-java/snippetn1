@@ -13,24 +13,39 @@
     <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
     <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
     <script type="text/javascript" src="/js/index.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+.panel-body {
+    font-size: 14px;
+}
+
+ol,ul{
+     padding-left: 20px;
+    margin:0px;   
+}
+
+</style>
 </head>
 
-<body>
+
+<body style="font-family: Monospace;">
     <div class="easyui-accordion">
-        <div title="Code Walkthrough" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
+        <div title="Code Walkthrough" data-options="collapsed:false" style="overflow:auto;padding:10px;">
             <!--888888888888888888888888888888888888888-->
             <ol>
 
-                <li></li>
-                <li></li>
-                <li></li>
+                <li></li><br>
+                <li></li><br>
+                <li></li><br>
             </ol>
             <!--888888888888888888888888888888888888888-->
             <br>
         </div>
     </div>
     <div class="easyui-accordion">
-        <div title="Description" data-options="iconCls:'icon-ok',collapsed:true" style="overflow:auto;padding:10px;">
+        <div title="Description" data-options="collapsed:true" style="overflow:auto;padding:10px;">
             <!--888888888888888888888888888888888888888-->
 <strong>Functions and Scope</strong> 
                 <br>
@@ -46,7 +61,7 @@ Scope is the set of variables, objects, and functions you have access to.JavaScr
 <br>
 Functions defined inside other functions, known as nested functions, have access to their parent function's scope.Pay attention to the comments in the code below:
 <br>
-<code><pre>
+<pre><code class="javascript">
 var a = 4;  // a is a global variable, it can be accessed by the functions below
 
 function foo() {
@@ -62,7 +77,7 @@ function foo() {
 }
 
 foo(); // 4, 2, 48
-</pre></code>
+</code></pre>
             <!--888888888888888888888888888888888888888-->
         </div>
     </div>

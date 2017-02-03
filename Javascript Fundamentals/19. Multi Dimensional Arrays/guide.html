@@ -13,27 +13,42 @@
     <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
     <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
     <script type="text/javascript" src="/js/index.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+.panel-body {
+    font-size: 14px;
+}
+
+ol,ul{
+     padding-left: 20px;
+    margin:0px;   
+}
+
+</style>
 </head>
 
-<body>
+
+<body style="font-family: Monospace;">
     <div class="easyui-accordion">
-        <div title="Code Walkthrough" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
+        <div title="Code Walkthrough" data-options="collapsed:false" style="overflow:auto;padding:10px;">
            <ol> 
-               <li></li>
-               <li></li>
-               <li></li>
+               <li></li><br>
+               <li></li><br>
+               <li></li><br>
            </ol>
 
 <br>
         </div>
     </div>
     <div class="easyui-accordion">
-        <div title="Description" data-options="iconCls:'icon-ok',collapsed:true" style="overflow:auto;padding:10px;">
+        <div title="Description" data-options="collapsed:true" style="overflow:auto;padding:10px;">
 <strong>Multi Dimensional Arrays</strong>
 <br>
 Arrays in JavaScript can store any data type inside each element.So we can store an array in each element of <strong>students </strong>array.
 <br><br>
-<code><pre>
+<pre><code class="javascript">
 var students = [
 	['Betty', 80], 
 	['David', 77], 
@@ -41,7 +56,7 @@ var students = [
 	['Bush', 95], 
 	['Aangelina', 68]
 ]
-</pre></code>
+</code></pre>
 <br><br>
 You can refer to marks of berry by using <strong>students[0][1]</strong> notation.
 <br>

@@ -12,17 +12,31 @@
     <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
     <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
     <script type="text/javascript" src="/js/index.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+.panel-body {
+    font-size: 14px;
+}
+
+ol,ul{
+     padding-left: 20px;
+    margin:0px;   
+}
+
+</style>
 </head>
 
-<body>
+
+<body style="font-family: Monospace;">
     <div class="easyui-accordion">
-        <div title="Exercise" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
+        <div title="Exercise" data-options="collapsed:false" style="overflow:auto;padding:10px;">
             A variable <strong>sentence</strong> is defined with <strong>James likes Maths class</strong></code>. Change
             the value of <strong>sentence</strong> to <strong>James likes English class</strong>
         </div>
         <div title="Code Walkthrough" data-options="iconCls:'icon-help',collapsed:false" style="padding:10px;">
-        <code>
-            <pre>
+        <pre><code class="javascript">
 var  sentence = "James likes Maths class";
  
 //Change the order to "James likes English class"
@@ -32,8 +46,7 @@ console.log(sentence);
 //assign length with the length of the new order string.
 var length = sentence.length;
 console.log("Length of 'sentence' is: "+length);  
-            </pre>
-        </code>
+            </code></pre>
         </div>
     </div>
 </body>

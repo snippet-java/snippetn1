@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <!--88888888888888888888888888888-->
-    <title>Array Functions Challenge</title>
+    <title>Array Functions Exercise</title>
     <link rel="stylesheet" type="text/css" href="/js/themes/easyui.css">
     <link rel="stylesheet" type="text/css" href="/js/themes/icon.css">
     <script type="text/javascript" src="/js/jquery.min.js"></script>
@@ -13,11 +13,26 @@
     <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
     <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
     <script type="text/javascript" src="/js/index.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+.panel-body {
+    font-size: 14px;
+}
+
+ol,ul{
+     padding-left: 20px;
+    margin:0px;   
+}
+
+</style>
 </head>
 
-<body>
+
+<body style="font-family: Monospace;">
     <div class="easyui-accordion">
-        <div title="Challenge" data-options="iconCls:'icon-ok',collapsed:true" style="overflow:auto;padding:10px;">
+        <div title="Exercise" data-options="collapsed:true" style="overflow:auto;padding:10px;">
             <!--88888888888888888888888888888-->
 <br>
 Find the <strong>grade</strong> for the provided <strong>mark</strong>
@@ -27,8 +42,8 @@ Find the <strong>grade</strong> for the provided <strong>mark</strong>
         </div>
     </div>
     <div class="easyui-accordion">
-        <div title="Solution" data-options="iconCls:'icon-ok',collapsed:true" style="overflow:auto;padding:10px;">
-<code><pre> 
+        <div title="Solution" data-options="collapsed:true" style="overflow:auto;padding:10px;">
+<pre><code class="javascript"> 
 <!--88888888888888888888888888888-->    
 //This function returns garde for a mark
 function getGrade(mark) {
@@ -61,7 +76,7 @@ var students = [['Betty', 80], ['David', 77], ['Celina', 88], ['Bush', 95], ['Aa
  
 students.forEach(printallgrades);
 <!--88888888888888888888888888888-->
-</pre></code>       
+</code></pre>       
         
         </div>
     </div>

@@ -13,21 +13,36 @@
     <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
     <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
     <script type="text/javascript" src="/js/index.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+.panel-body {
+    font-size: 14px;
+}
+
+ol,ul{
+     padding-left: 20px;
+    margin:0px;   
+}
+
+</style>
 </head>
 
-<body>
+
+<body style="font-family: Monospace;">
     <div class="easyui-accordion">
         <div title="Code Walkthrough" data-options="iconCls:'icon-help',collapsed:false" style="padding:10px;">
             Converting celsius to fahrenheit using the operators 
             <ol>
-                <li>To convert temperatures in degrees Celsius to Fahrenheit, multiply by 1.8 (or 9/5) and add 32.</li>
+                <li>To convert temperatures in degrees Celsius to Fahrenheit, multiply by 1.8 (or 9/5) and add 32.</li><br>
                 <li>
                 To convert temperatures in degrees Fahrenheit to Celsius, subtract 32 and multiply by .5556 (or 5/9) And back to celsius to validate the answer
-                </li>
+                </li><br>
             </ol>
         </div>
     </div>
-     <div title="Description" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
+     <div title="Description" data-options="collapsed:false" style="overflow:auto;padding:10px;">
            <strong>Numeric variables and operators</strong>
 <br>
 Numbers can be integers, like 2, 14, or 4353, or they can be decimals,
@@ -40,8 +55,7 @@ You can use Math library functions to perform additional mathemetical functions
 We can do basic math using familiar operators like +, -, *, /, and %.
 <br>
 <strong>Example</Strong>
-<code>
-    <pre>
+<pre><code class="javascript">
 var x = 100 + 50;
 //Value of x is 150
 
@@ -82,8 +96,7 @@ x ++;
 var x = 10;
 x --;
 //value of x is 9
-</pre>
-</code>
+</code></pre>
 <br><br>
         </div>
 </body>

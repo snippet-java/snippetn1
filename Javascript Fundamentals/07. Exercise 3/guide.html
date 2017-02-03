@@ -13,11 +13,26 @@
     <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
     <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
     <script type="text/javascript" src="/js/index.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+.panel-body {
+    font-size: 14px;
+}
+
+ol,ul{
+     padding-left: 20px;
+    margin:0px;   
+}
+
+</style>
 </head>
 
-<body>
+
+<body style="font-family: Monospace;">
     <div class="easyui-accordion">
-        <div title="Exercise" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
+        <div title="Exercise" data-options="collapsed:false" style="overflow:auto;padding:10px;">
             <br>
             The <strong><code>radius </code></strong>and <strong><code>pi </code></strong>are defined. Find the area and circumference of circle. 
             <br>
@@ -26,7 +41,7 @@
     </div>
 
 <div class="easyui-accordion">
-        <div title="Exercise" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
+        <div title="Exercise" data-options="collapsed:false" style="overflow:auto;padding:10px;">
 <pre><code class="javascript">
 var radius = 5;
  

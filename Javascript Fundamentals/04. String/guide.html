@@ -12,17 +12,32 @@
     <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
     <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
     <script type="text/javascript" src="/js/index.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+.panel-body {
+    font-size: 14px;
+}
+
+ol,ul{
+     padding-left: 20px;
+    margin:0px;   
+}
+
+</style>
 </head>
 
-<body>
+
+<body style="Monospace;">
     <div class="easyui-accordion">
-        <div title="Code Walkthrough" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
+        <div title="Code Walkthrough" data-options="collapsed:false" style="overflow:auto;padding:10px;">
             <ol>
-                <li>variable 'example' is assigned with 'Mr Blue has a blue house and a blue car'</li>
-                <li>'replace' method is used to replace the parts of the string</li>
-                <li>'charAt()' method is used to find first,fourth and last characters in the string</li>
-                <li>'substring()' is used to extract substrings form start and end</li>
-                <li>'indexOf()' is used to search for a substring in a string</li>
+                <li>variable 'example' is assigned with 'Mr Blue has a blue house and a blue car'</li><br>
+                <li>'replace' method is used to replace the parts of the string</li><br>
+                <li>'charAt()' method is used to find first,fourth and last characters in the string</li><br>
+                <li>'substring()' is used to extract substrings form start and end</li><br>
+                <li>'indexOf()' is used to search for a substring in a string</li><br>
             </ol>
         </div>
         <div title="Description" data-options="iconCls:'icon-help',collapsed:false" style="padding:10px;">
@@ -49,24 +64,24 @@
             of this introductory tutorial. Please refer to <a href="http://www.w3schools.com/jsref/jsref_obj_regexp.asp">w3 Schools</a>            for more details
             <br><br> The <strong>charAt()</strong> method returns the specified character from a string.Index is passed as
             parameter to the <strong>charAt()</strong> method. 
-            <code><pre>           
+            <pre><code class="javascript">           
             var studentName = "Linda";
             studentName.charAt(0);
             // First character 'L' is returned 
             studentName.charAt(3); 
             // Fourth character 'd' is retruned 
-            </pre></code>
+            </code></pre>
             The <strong>substring()</strong> returns a subset of a string between one index and another, or through
             the end of the string. 
-            <code><pre> 
+            <pre><code class="javascript"> 
             var studentName = "Linda" 
             studentName.substring(0, 3); 
             //returns 'Lin'. End index is not included studentName.substring(3); 
             // returns 'da'. If End index is not passed,
-            //the string from start index to end will be returned </pre></code>
+            //the string from start index to end will be returned </code></pre>
             The <strong>indexOf()</strong> method returns the index within the calling String object of the first
             occurrence of the specified value 
-            <code><pre>
+            <pre><code class="javascript">
             var studentName = "Linda" 
             studentName.indexOf('L');
             // returns 0 
@@ -74,7 +89,7 @@
             // returns 1 
             studentName.substring('e');
             //returns -1 
-            </pre></code>
+            </code></pre>
             
         </div>
     </div>

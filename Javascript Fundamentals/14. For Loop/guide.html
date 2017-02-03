@@ -13,11 +13,26 @@
     <link rel="stylesheet" type="text/css" href="/js/themes/ribbon-icon.css">
     <script type="text/javascript" src="/js/jquery.ribbon.js"></script>
     <script type="text/javascript" src="/js/index.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<style>
+.panel-body {
+    font-size: 14px;
+}
+
+ol,ul{
+     padding-left: 20px;
+    margin:0px;   
+}
+
+</style>
 </head>
 
-<body>
+
+<body style="font-family: Monospace;">
     <div class="easyui-accordion">
-        <div title="Code Walkthrough" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
+        <div title="Code Walkthrough" data-options="collapsed:false" style="overflow:auto;padding:10px;">
            <ol>
                Program to print stars in the following format for <strong>numRows</strong> rows
                 <br>*
@@ -25,26 +40,26 @@
                 <br>***
                 <br>**** 
   
-               <li></li>
-               <li></li>
-               <li></li>
+               <li></li><br>
+               <li></li><br>
+               <li></li><br>
            </ol>
 
 <br>
         </div>
     </div>
     <div class="easyui-accordion">
-        <div title="Description" data-options="iconCls:'icon-ok',collapsed:true" style="overflow:auto;padding:10px;">
+        <div title="Description" data-options="collapsed:true" style="overflow:auto;padding:10px;">
         <strong>For Loop</strong>
 <br>
 For loops allow you to repeatedly run a block of code a certain number of times. This for loop logs to the console ten times:
 <br>
-<code><pre>
+<pre><code class="javascript">
 for (var i = 1; i <= 10; i++) {
   // log the numbers 1 through 10
   console.log(i)
 }
-</pre></code>
+</code></pre>
 <br>
 The first part, <strong><code>var i = 0</code></strong>, is run once at the beginning of the loop. The variable i is used to track how many times the loop has run.
 <br><br>
