@@ -17,16 +17,34 @@
 
 <body>
     <div class="easyui-accordion">
-        <div title="About" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
-            <h3 style="color:#0099FF;">About</h3>
-           <strong>Exercise:</strong>
+        <div title="Exercise" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
             <br>
             The <strong><code>radius </code></strong>and <strong><code>pi </code></strong>are defined. Find the area and circumference of circle. 
             <br>
             You can use Math functions to perform additional mathematical. Please vist <a href="http://www.w3schools.com/js/js_math.asp">W3 Schools</a>for more details
-            <br><br>
         </div>
     </div>
+
+<div class="easyui-accordion">
+        <div title="Exercise" data-options="iconCls:'icon-ok',collapsed:false" style="overflow:auto;padding:10px;">
+<pre><code class="javascript">
+var radius = 5;
+ 
+//Area of a circle can be calculated using PI(R Squared)
+var area = Math.PI * radius * radius ;
+console.log("Area of the circle is "+area);
+ 
+//Area of a circle can be calculated using the formula 2PIr
+var circumference = 2 * Math.PI * radius ;
+console.log("Circumference of the circle is "+circumference);
+ 
+//Assign the rounded value of circumference to roundedCircumference
+var roundedCircumference = Math.round(circumference)
+console.log("Circumference of the circle after rounding the value is"+roundedCircumference);
+</code></pre>
+    </div>
+</div>
+
 </body>
 
 </html>
