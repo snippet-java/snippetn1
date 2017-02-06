@@ -3,49 +3,73 @@
 var parameters = {
 		"username" : "",
 		"password" : "",
-		"text" : "Call me Ishmael. Some years ago-never mind how long "
-		      + "precisely-having little or no money in my purse, and nothing "
-		      + "particular to interest me on shore, I thought I would sail about "
-		      + "a little and see the watery part of the world. It is a way "
-		      + "I have of driving off the spleen and regulating the circulation. "
-		      + "Whenever I find myself growing grim about the mouth; whenever it "
-		      + "is a damp, drizzly November in my soul; whenever I find myself "
-		      + "involuntarily pausing before coffin warehouses, and bringing up "
-		      + "the rear of every funeral I meet; and especially whenever my "
-		      + "hypos get such an upper hand of me, that it requires a strong "
-		      + "moral principle to prevent me from deliberately stepping into "
-		      + "the street, and methodically knocking people's hats off-then, "
-		      + "I account it high time to get to sea as soon as I can."
+		
+		// choose one of the 3 available samples 
+		
+		"screen_name" : "Oprah"
+//		"screen_name" : "KingJames"
+//		"screen_name" : "ladygaga"
 };
-
 
 //Main function
 //Output will be reflected via console.log function
 function process(req_parameters, callback) {
 
 	var watson = require('watson-developer-cloud');
-	
+	var request = require('request');
+
 	var personality_insights = watson.personality_insights({
-		  username: req_parameters.username, // SET YOUR USERNAME
-		  password: req_parameters.password, // SET YOUR PASSWORD
-		  use_unauthenticated: true,
-		  version: 'v2'
-		});
-	
-	// Personality Insights using Watson Lib
-	personality_insights.profile({
-		  text: req_parameters.text},
-		  function (err, response) {
-			    if (err) {
-			      console.log('error:', err);
-			      if (typeof callback !== 'undefined' && typeof callback=="function") return callback(err);
-			    }
-			    else {
-			      console.log(JSON.stringify(response, null, 2));
-					if (typeof callback !== 'undefined' && typeof callback=="function") return callback(response);
-			    }
+		username: req_parameters.username, // SET YOUR USERNAME
+		password: req_parameters.password, // SET YOUR PASSWORD
+		use_unauthenticated: true,
+		version: 'v2'
+	});
+
+	// obtain pre-loaded tweets from watson-developer-cloud github
+	var url = "https://raw.githubusercontent.com/watson-developer-cloud/personality-insights-nodejs/master/public/data/twitter/" + req_parameters.screen_name + "_tweets.json";
+	request(url, function (err, response, body) {
+		if (err) {
+			console.log('error:', err);
+			if (typeof callback !== 'undefined' && typeof callback=="function") return callback(err);
+			return;
+		}
+
+		// map tweets to Personality Insights format
+		var tweets = JSON.parse(body || []);
+		var contentItems = [];
+		for (var i in tweets) {
+			var tweet = tweets[i];
+			var contentItem = {
+					content : tweet.text || "",
+					id : tweet.id_str || "",
+					created : new Date(tweet.created_at).getTime(),
+					contenttype : "text/plain",
+					language : "en",
+					parentid : tweet.in_reply_to_status_id || ""
 			}
-	);
+			if (contentItem.parentid)
+				contentItem.reply = true;
+
+			contentItems.push(contentItem);
+		}
+
+		var profileJson = { contentItems : contentItems };
+
+		// Personality Insights using Watson Lib
+		personality_insights.profile(
+				profileJson,
+				function (err, response) {
+					if (err) {
+						console.log('error:', err);
+						if (typeof callback !== 'undefined' && typeof callback=="function") return callback(err);
+					} else {
+						console.log(JSON.stringify(response, null, 2));
+						if (typeof callback !== 'undefined' && typeof callback=="function") return callback(response);
+					}
+				}
+		);
+
+	})
 }
 
 //Allows Execution of this process
